@@ -1,5 +1,7 @@
-/*flex: 0 0 calc(50% - 25px);*/
-/*display: flex;*/
-/*border-radius: 20px;*/
-/*color: white;*/
-/*background-color: grey;*/
+.main{
+    flex: 0 0 calc(50% - 25px);
+    display: flex;
+    border-radius: 20px;
+    color: white;
+    background-color: grey;
+}
