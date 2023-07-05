@@ -1,8 +1,6 @@
 .main{
-    display: flex;
     border-radius: 20px;
     border: 1px solid black;
-   justify-content: center;
     align-items: center;
     color: wheat;
     background-color: #282c34;
