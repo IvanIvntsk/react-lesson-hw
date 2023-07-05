@@ -1,7 +1,6 @@
 .main{
-    flex: 0 0 calc(50% - 25px);
     display: flex;
     border-radius: 20px;
-    color: white;
-    background-color: grey;
+    border: 1px solid black;
+    align-content: center;
 }
