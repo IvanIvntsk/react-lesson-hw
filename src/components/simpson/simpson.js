@@ -1,4 +1,5 @@
 import React from 'react';
+import './simpson.css'
 
 const Simpson = (prorps) => {
     let {name, surname, age, gender, photo} = prorps
