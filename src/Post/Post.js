@@ -1,9 +1,8 @@
-import React from 'react';
 
 const Post = (props) => {
     const {post} = props
     return (
-        <div>
+        <div className={'container'}>
             <h6>{post.title}</h6>
             <p>{post.id}</p>
         </div>
