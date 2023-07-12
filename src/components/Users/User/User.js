@@ -1,0 +1,19 @@
+import React from 'react';
+import UserAddress from "../UserAddress/UserAddress";
+import UserDetails from "../UserDetails/UserDetails";
+import Company from "../Company/Company";
+
+const User = ({user}) => {
+    const {id, name, username, email, address, company} = user
+    return (
+        <div>
+            <UserDetails value={{id, name, username, email}}/>
+            <UserAddress address={address}/>
+            <Company company={company}/>
+
+
+        </div>
+    );
+};
+
+export default User;
