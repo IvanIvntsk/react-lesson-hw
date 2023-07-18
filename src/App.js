@@ -1,10 +1,10 @@
 import React from 'react';
-import User from "./components/UsersContainer/User/User";
+import UsersContainet from "./components/UsersContainer/UsersContainet";
 
 const App = () => {
     return (
         <div>
-            <User/>
+            <UsersContainet/>
         </div>
     );
 };
