@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Comment from "../Comment/Comment";
 
-const Comments = () => {
-    const [comments, setComments] = useState([])
+const Comments = ({comments, setComments}) => {
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/comments')
