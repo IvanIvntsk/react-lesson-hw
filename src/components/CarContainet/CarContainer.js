@@ -4,7 +4,6 @@ import Cars from "./Cars/Cars";
 
 const CarContainer = () => {
     const [cars, setCars] = useState([])
-    const [carUpdate, setCarUpdate] = useState[null]
     return (
         <div>
             <CarForm setCars={setCars}/>
