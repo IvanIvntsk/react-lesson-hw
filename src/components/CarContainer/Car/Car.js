@@ -13,7 +13,7 @@ const Car = ({car}) => {
     }
 
     return (
-        <div>
+        <div style={{display:"flex", justifyContent:"space-around",margin: "10px", backgroundColor:"whitesmoke"}}>
             <div>Id:{id}</div>
             <div>Brand:{brand}</div>
             <div>Price:{price}</div>
