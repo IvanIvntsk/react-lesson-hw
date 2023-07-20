@@ -8,38 +8,45 @@ const CarForm = () => {
     const [errors, setErrors] = useState(null)
     const {setTrigger, CarForUpdate, setCarForUpdate} = useContext(Context)
 
-    if (CarForUpdate)
-        setValue('', CarForUpdate.brand)
+    if (CarForUpdate){
+        setValue('brand',CarForUpdate.brand)
+        setValue('price',CarForUpdate.price)
+        setValue('year',CarForUpdate.year)
+    }
+
     const add = async (car) => {
         try {
             await carServices.create(car)
             setErrors(null)
             reset()
             setTrigger()
-            setCarForUpdate(null)
-        }catch (e) {
+        } catch (e) {
             setErrors(e.response.data)
         }
+    }
         const update = async (car) => {
             try {
                 await carServices.updateById(CarForUpdate.id, car)
                 reset()
                 setErrors(null)
+                setCarForUpdate(null)
+                setTrigger()
             } catch (e) {
                 setErrors(e.response.data)
             }
         }
-    }
     return (
+        <form style={{display: "flex", border: "1px black solid", borderRadius:"10px",justifyContent:"space-around"}}
+              onSubmit={handleSubmit(!CarForUpdate?add:update)}>
 
-        <form onSubmit={handleSubmit(add)}>
             <label><input type={"text"} placeholder={'brand'} {...register('brand')}/></label>
             {errors&&JSON.stringify(errors)}
             <label><input type={"text"} placeholder={'price'} {...register('price')}/></label>
             {errors&&JSON.stringify(errors)}
             <label><input type={"text"} placeholder={'year'} {...register('year')}/></label>
 
-            <button>{!CarForUpdate?'add':'update'}</button>
+            <button style={{borderRadius:"10px", borderStyle:"none", color:"red", backgroundColor:"black", fontSize:"20px"}
+            }>{!CarForUpdate?'add':'update'}</button>
         </form>
     );
 };

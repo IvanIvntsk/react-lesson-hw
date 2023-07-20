@@ -11,11 +11,12 @@ const CarContainer = () => {
         <Context.Provider value={{
             trigger,
             setTrigger:()=>setTrigger(prev=>!prev),
-            CarForUpdate
+            CarForUpdate,
+            setCarForUpdate
         }}>
             <div>
-                <CarForm/>
-                <Cars/>
+            <CarForm/>
+            <Cars/>
             </div>
         </Context.Provider>
     );

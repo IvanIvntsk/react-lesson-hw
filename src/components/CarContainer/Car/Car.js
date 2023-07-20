@@ -1,11 +1,17 @@
 import React, {useContext} from 'react';
 import {Context} from "../CarContainer";
+import {carServices} from "../../../services/CarServices";
 
 const Car = ({car}) => {
 
-    const {setCarForUpdate} = useContext(Context)
+    const {setCarForUpdate, setTrigger} = useContext(Context)
 
     const{id, brand, price, year} = car
+
+    const carDelete = async () => {
+        await carServices.deleteById(id)
+    }
+
     return (
         <div>
             <div>Id:{id}</div>
@@ -13,7 +19,7 @@ const Car = ({car}) => {
             <div>Price:{price}</div>
             <div>Year:{year}</div>
             <button onClick={()=>setCarForUpdate(car)}>Update</button>
-            <button>Delete</button>
+            <button onClick={carDelete}>Delete</button>
         </div>
     );
 };
