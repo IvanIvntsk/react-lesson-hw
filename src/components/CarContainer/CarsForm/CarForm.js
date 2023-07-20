@@ -39,7 +39,7 @@ const CarForm = () => {
         <form style={{display: "flex", border: "1px black solid", borderRadius:"10px",justifyContent:"space-around"}}
               onSubmit={handleSubmit(!CarForUpdate?add:update)}>
 
-            <label><input type={"text"} placeholder={'brand'} {...register('brand')}/></label>
+            <label><input type={"text"} placeholder={'brand'} {...register('brand',{})}/></label>
             {errors&&JSON.stringify(errors)}
             <label><input type={"text"} placeholder={'price'} {...register('price')}/></label>
             {errors&&JSON.stringify(errors)}
