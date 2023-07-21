@@ -8,3 +8,10 @@ export const usersServices = {
     updateById:(id, user)=>apiServices.put(Url.users.byId(id), user),
     deleteById:(id)=>apiServices.delete(Url.users.byId(id))
 }
+
+export const commentServices = {
+    getAll:()=>apiServices.get(Url.comment.base),
+    create:(user)=>apiServices.post(Url.comment.base, user),
+    updateById:(id, user)=>apiServices.put(Url.comment.byId(id), user),
+    deleteById:(id)=>apiServices.delete(Url.comment.byId(id))
+}
