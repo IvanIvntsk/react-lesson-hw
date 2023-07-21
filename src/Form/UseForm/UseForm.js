@@ -22,11 +22,11 @@ const UseForm = () => {
 
     return (
         <div>
-            <form>
+            <form onSubmit={handleSubmit(submit)}>
 
                 <h1>User Form</h1>
 
-                <label onSubmit={handleSubmit(submit)}>
+                <label>
                     <input type={'name'} placeholder={'name'} {...register('name')}/>
                     <input type={'username'} placeholder={'username'} {...register('username')}/>
                     <input type={'email'} placeholder={'email'} {...register('email')}/>
