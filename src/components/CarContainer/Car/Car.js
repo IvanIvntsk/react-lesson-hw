@@ -10,6 +10,7 @@ const Car = ({car}) => {
 
     const carDelete = async () => {
         await carServices.deleteById(id)
+        setTrigger()
     }
 
     return (
