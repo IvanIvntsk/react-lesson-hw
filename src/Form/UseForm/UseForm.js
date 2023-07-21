@@ -21,17 +21,20 @@ const UseForm = () => {
     }
 
     return (
-        <div>
+        <div style={{display:"flex", justifyContent:"center",alignContent:"center", fontSize:"20px"}}>
             <form onSubmit={handleSubmit(submit)}>
 
-                <h1>User Form</h1>
+                <h1 style={{margin:"0"}}>User Form</h1>
 
                 <label>
                     <input type={'name'} placeholder={'name'} {...register('name')}/>
+                    <br/>
                     <input type={'username'} placeholder={'username'} {...register('username')}/>
+                    <br/>
                     <input type={'email'} placeholder={'email'} {...register('email')}/>
+                    <br/>
                     <input type={'address'} placeholder={'address'} {...register('address')}/>
-
+                    <br/>
                     <button>Submit</button>
 
                 </label>

@@ -21,17 +21,20 @@ const UseForm = () => {
     }
 
     return (
-        <div>
+        <div style={{display:"flex", justifyContent:"center",alignContent:"center", fontSize:"20px"}}>
             <form onSubmit={handleSubmit(add)}>
 
-                <h1>Comment Form</h1>
+                <h1 style={{display:"flex",justifyContent:"center"}}>Comment Form</h1>
 
                 <label>
                     <input type={'postId'} placeholder={'postId'} {...register('postId')}/>
+                    <br/>
                     <input type={'name'} placeholder={'name'} {...register('name')}/>
+                    <br/>
                     <input type={'email'} placeholder={'email'} {...register('email')}/>
+                    <br/>
                     <input type={'body'} placeholder={'body'} {...register('body')}/>
-
+                    <br/>
                     <button>Add</button>
 
                 </label>
