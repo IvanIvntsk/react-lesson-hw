@@ -9,5 +9,9 @@ export const Url = {
         base: users,
         byId: (id) => `${users}/${id}`
 
+    },
+    comment:{
+        base:comment,
+        byId:(id) => `${comment}/${id}`
     }
 }
