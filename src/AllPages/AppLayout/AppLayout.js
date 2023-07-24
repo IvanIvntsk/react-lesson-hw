@@ -1,7 +1,7 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
 
-const Comments = () => {
+const AppLayout = () => {
     return (
         <div>
             <Outlet/>
@@ -9,4 +9,4 @@ const Comments = () => {
     );
 };
 
-export default Comments;
+export default AppLayout;
