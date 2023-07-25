@@ -1,14 +1,14 @@
 import React from 'react';
 
 import {Outlet} from "react-router-dom";
-import comments from "../../components/Comments/comments";
+import CommenTs from "../../components/Comments/CommenTs";
 
 
 
 const Comments = () => {
     return (
         <div>
-            <comments/>
+            <CommenTs/>
             <Outlet/>
 
         </div>
