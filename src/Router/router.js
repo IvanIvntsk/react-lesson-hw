@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
           element:<Comments/>,
           children:[
               {
-                  path:'/posts/:postId',
+                  path:'',
                   element:<Posts/>
               }
           ]
