@@ -1,7 +1,7 @@
 import React from 'react';
 
-import comments from "../../components/Comments/comments";
 import {Outlet} from "react-router-dom";
+import comments from "../../components/Comments/comments";
 
 
 
