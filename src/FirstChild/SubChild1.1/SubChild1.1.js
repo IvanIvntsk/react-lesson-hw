@@ -5,7 +5,7 @@ const SubChild11 = () => {
    const {data} = useContext(Context)
     return (
         <div>
-            {data.map(item=><div key={item}>item</div>)}
+            {data.map(item=><div key={item}>{item}</div>)}
         </div>
     );
 };
