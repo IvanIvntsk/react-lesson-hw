@@ -7,7 +7,7 @@ import CommenTs from "../../components/Comments/CommenTs";
 
 const Comments = () => {
     return (
-        <div>
+        <div style={{display:"flex"}}>
             <CommenTs/>
             <Outlet/>
 
