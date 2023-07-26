@@ -5,6 +5,7 @@ import Albums from "../AllPages/Albums/Albums";
 import Comments from "../AllPages/Comments/Comments";
 import Posts from "../AllPages/Posts/Posts";
 
+
 export const router = createBrowserRouter([
     {
     path:'',
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
           element:<Comments/>,
           children:[
               {
-                  path:'/comments/posts/:postId',
+                  path:'posts/:postId',
                   element:<Posts/>
               }
           ]

@@ -16,7 +16,6 @@ export const urls = {
         base:comment,
     },
     posts:{
-      base:posts,
       byId:(id)=>`${posts}/${id}`
     }
 }

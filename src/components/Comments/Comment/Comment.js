@@ -12,7 +12,7 @@ const Comment = ({comment}) => {
             <div>Email:{email}</div>
             <div>Body:{body}</div>
 
-            <button onClick={()=>navigate(`/posts/${id}`)}>Post</button>
+            <button onClick={()=>navigate(`posts`)}>Post</button>
         </div>
     );
 };
