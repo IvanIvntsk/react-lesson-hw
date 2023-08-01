@@ -1,0 +1,16 @@
+.div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    background-color: darkcyan;
+}
+.one{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+.one:active {
+    color: red;
+    cursor: progress;
+}

@@ -1,14 +1,13 @@
 import React from 'react';
-import CarsPage from "../CarsPage/CarsPage";
-import CommentsPage from "../CommentsPage/CommentsPage";
-import PostsPage from "../PostsPage/PostsPage";
+
+import Header from "../../components/header/header";
+import {Outlet} from "react-router-dom";
 
 const AppLayout = () => {
     return (
         <div>
-            <CarsPage/>
-            <CommentsPage/>
-            <PostsPage/>
+          <Header/>
+            <Outlet/>
         </div>
     );
 };
