@@ -18,9 +18,15 @@ const TestUseMemo = ({data, setData}) => {
     }
 
     return (
-        <div style={{display: "flex"}}>
+        <div style={{display: "flex", justifyContent: "center", fontSize: "100px"}}>
             {calculationMemo}
-            <button onClick={changeData}>Change</button>
+            <button style={{
+                width:"150px",
+                borderRadius: "50px",
+                backgroundColor:"black",
+                color: "white",
+                fontSize: "30px"
+            }} onClick={changeData}>Change</button>
         </div>
     );
 };

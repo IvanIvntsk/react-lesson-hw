@@ -13,7 +13,6 @@ const TestUseCallbackContainer = ({calculationFun}) => {
                todo={todo}
                setTodo={setTodo}
            />
-            <button onClick={calculationFun}></button>
         </div>
     );
 };
