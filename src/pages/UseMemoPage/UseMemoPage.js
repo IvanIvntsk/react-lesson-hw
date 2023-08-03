@@ -1,10 +1,10 @@
 import React from 'react';
-import TestUseMemo from "../../components/TestUseMemo/TestUseMemo";
+import TestUseMemoContainer from "../../components/TestUseMemo/TestUseMemoContainer/TestUseMemoContainer";
 
 const UseMemoPage = () => {
     return (
         <div>
-            <TestUseMemo/>
+            <TestUseMemoContainer/>
         </div>
     );
 };

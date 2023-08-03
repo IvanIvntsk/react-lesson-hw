@@ -2,7 +2,6 @@ import React, {useMemo} from 'react';
 
 const TestUseMemo = ({data, setData}) => {
 
-    // const [data, setData] = useState(0)
     console.log(data)
     const  calculation = (data) => {
         for (let i = 0; i < 99999; i++) {
@@ -19,7 +18,7 @@ const TestUseMemo = ({data, setData}) => {
     }
 
     return (
-        <div>
+        <div style={{display: "flex"}}>
             {calculationMemo}
             <button onClick={changeData}>Change</button>
         </div>
