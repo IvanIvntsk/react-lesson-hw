@@ -7,7 +7,7 @@ const TestUseCallback = ({data, setData, todo, setTodo}) => {
     }
 
     const  calculation = (data) => {
-        for (let i = 0; i < 99999; i++) {
+        for (let i = 0; i < 999999; i++) {
             data++;
         }
         return data;

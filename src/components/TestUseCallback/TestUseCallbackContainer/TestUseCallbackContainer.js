@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import TestUseCallback from "../TestUseCallback";
 
 const TestUseCallbackContainer = ({calculationFun}) => {
@@ -13,8 +13,9 @@ const TestUseCallbackContainer = ({calculationFun}) => {
                todo={todo}
                setTodo={setTodo}
            />
+            {calculationFun}
         </div>
     );
 };
 
-export default TestUseCallbackContainer;
+export default memo(TestUseCallbackContainer);
