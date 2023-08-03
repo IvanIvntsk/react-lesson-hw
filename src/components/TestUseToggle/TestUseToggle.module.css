@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main p{
+    color: red;
+    font-size: 100px;
+    border: 2px black solid;
+}
+
+.main button{
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 40px;
+    border: none;
+    background-color: sandybrown;
+    color: white;
+    cursor: pointer;
+}
