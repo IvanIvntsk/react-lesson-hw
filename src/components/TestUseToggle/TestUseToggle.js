@@ -1,7 +1,7 @@
 import React from 'react';
 
 import style from './TestUseToggle.module.css'
-import useToggle from "../../hook/useToggle";
+import useToggle from "../../hooks/useToggle";
 
 const TestUseToggle = () => {
 
