@@ -18,7 +18,7 @@ const TestUseCallback = ({data, setData, todo, setTodo}) => {
 
     return (
         <div>
-            {todo.map((todo, index)=> <p>{todo} №{index}</p>)}
+            {todo.map((todo, index)=> <p key={index}>{todo} №{index}</p>)}
             <button onClick={addTodo}>Add todo</button>
             <hr/>
             {calculationMemo()}
