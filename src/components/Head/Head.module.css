@@ -15,7 +15,9 @@
     border-radius: 8px;
     text-decoration: none;
     cursor: pointer;
-
+}
+a:hover{
+  text-decoration: underline;
 }
 .head a[class='active'] {
     color: red;

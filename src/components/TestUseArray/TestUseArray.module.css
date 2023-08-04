@@ -1,0 +1,29 @@
+.array{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 600px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.array button{
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0.0.0.2);
+    margin: 10px;
+}
+.text{
+    font-size: 50px;
+    color: #666;
+
+
+}
+
