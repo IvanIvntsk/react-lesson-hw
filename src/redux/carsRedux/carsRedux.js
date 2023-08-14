@@ -2,7 +2,8 @@ import {carsActionsType} from "../actions/CarsActions";
 
 const initialState = {
     cars: [],
-    update: null
+    update: null,
+    carUpdate: {}
 }
 const carsRedux = (state = initialState, action) => {
     switch (action.type) {
@@ -19,7 +20,8 @@ const carsRedux = (state = initialState, action) => {
                         case  carsActionsType.UPDATE:
                             return{
                                 ...state,
-                              update: action.payload
+                              update: action.payload,
+                                carUpdate: action.payload.cars
                             }
         default:
             return state

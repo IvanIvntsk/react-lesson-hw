@@ -8,7 +8,7 @@ const Car = ({car}) => {
 
 
     const updateCar = (car) => {
-        dispatch(carsActions.update(true, car))
+        dispatch(carsActions.update(id, car))
     }
     const deleteCar = (id) => {
         dispatch(carsThunks.delete(id))
