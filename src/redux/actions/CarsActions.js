@@ -1,35 +1,35 @@
-import carServices from "../../services/carServices/carServices";
+import {carServices} from "../../services/carServices/carServices";
 
-const carsActions = {
+const carsActionsType = {
     SET: 'SET',
     CREATE: 'CREATE',
     UPDATE: 'UPDATE',
     DELETE: 'DELETE',
 }
 
-const carsActionsType = {
-    set: (data) => ({type:carsActions.SET, payload: data}),
-    create: (data) => ({type:carsActions.CREATE, payload: data}),
-    update: (id, data) => ({type:carsActions.UPDATE, payload: id, data}),
-    delete: (id) => ({type:carsActions.DELETE, payload: id})
+const carsActions = {
+    set: (data) => ({type:carsActionsType.SET, payload: data}),
+    create: (data) => ({type:carsActionsType.CREATE, payload: data}),
+    update: (id, data) => ({type:carsActionsType.UPDATE, payload: id, data}),
+    delete: (id) => ({type:carsActionsType.DELETE, payload: id})
 }
 
 const carsThunks = {
     get: () => (dispatch) => {
         carServices.getAll()
-            .then(({data})=>dispatch(carsActionsType.set(data)))
+            .then(({data})=>dispatch(carsActions.set(data)))
     },
-    create: (data) => (dispatch) => {
-        carServices.create(data)
-            .then(({data}) => dispatch(carsActionsType.create(data)))
+    create: (car) => (dispatch) => {
+        carServices.create(car)
+            .then(({data}) => dispatch(carsActions.create(data)))
     },
-    put: (id, data) => (dispatch) => {
-        return carServices.put(id, data)
-            .then(() => dispatch(carsActionsType.update(id, data)))
+    update: (id, car) => (dispatch) => {
+        return carServices.put(id, car)
+            .then(() => dispatch(carsActions.update(id, car)))
     },
     delete: (id) => (dispatch) => {
         carServices.delete(id)
-            .then(() => dispatch(carsActionsType.delete(id)))
+            .then(() => dispatch(carsActions.delete(id)))
     }
 }
 

@@ -1,4 +1,4 @@
-import {carsActions} from "../actions/CarsActions";
+import {carsActionsType} from "../actions/CarsActions";
 
 const initialState = {
     cars: [],
@@ -6,24 +6,24 @@ const initialState = {
 }
 const carsRedux = (state = initialState, action) => {
     switch (action.type) {
-        case  carsActions.SET:
+        case  carsActionsType.SET:
             return{
                 ...state,
                 cars: action.payload
             }
-                case  carsActions.CREATE:
+                case  carsActionsType.CREATE:
                     return{
                         ...state,
                         cars: [...state.cars, action.payload]
                     }
-                        case  carsActions.UPDATE:
+                        case  carsActionsType.UPDATE:
                             return{
                                 ...state,
-                              update: action.payload.update
+                              update: action.payload
                             }
-                                    return{
-                                        ...state,
-                                        cars: state.cars.filter(car => car.id !== action.payload)
-                                    }
+        default:
+            return state
     }
 }
+
+export default carsRedux
