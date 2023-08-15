@@ -20,9 +20,13 @@ const carsRedux = (state = initialState, action) => {
                         case  carsActionsType.UPDATE:
                             return{
                                 ...state,
-                              update: action.payload,
-                                carUpdate: action.payload.cars
+                              carUpdate: action.payload
                             }
+                             case carsActionsType.DELETE:
+                                return {
+                                ...state,
+                                    cars: state.cars.filter(car => car.id !== action.payload)
+                                }
         default:
             return state
     }

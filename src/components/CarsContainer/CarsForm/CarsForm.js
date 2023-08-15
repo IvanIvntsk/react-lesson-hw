@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {useForm} from "react-hook-form";
 import {useDispatch, useSelector} from "react-redux";
@@ -9,11 +9,11 @@ const CarsForm = () => {
     const {update, carUpdate} = useSelector(state => state.cars)
     const {register,reset,setValue,handleSubmit} = useForm()
 
-    if(update) {
-        setValue('brand', update.brand)
-        setValue('price', update.price)
-        setValue('year', update.year)
-    }
+    useEffect(() => {
+        setValue('brand',carUpdate.brand)
+        setValue('price',carUpdate.price)
+        setValue('year', carUpdate.year)
+    },[carUpdate])
     const save =  (car) => {
         dispatch(carsThunks.create(car))
         reset()
